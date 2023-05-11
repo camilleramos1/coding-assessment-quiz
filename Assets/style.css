@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100%;
+}
+
+:root {
+    --light: rgb(207, 240, 252);
+    --mid: skyblue;
+    --dark: rgb(74, 196, 244);
+    --text-light: rgb(142, 229, 249);
+    --text-dark: rgb(0, 179, 255);
+    --btn: rgb(238, 199, 250);
+}
+
+.hover-text:hover {
+    cursor: pointer;
+    margin-right: 80%;
+    transform: translateY(-3px);
+    text-decoration: underline;
+}
+
+.hover-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* nav el */
+nav {
+    background-color: var(--light);
+    color: var(--text-dark);
+    justify-content: space-between;
+    padding: 1em 1em;
+    text-align: left;
+}
+
+.timer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--text-dark);
+}
+
+#title {
+    color: var(--text-dark);
+    font-size: 48px;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+button {
+    background-color: var(--btn);
+    border: white;
+    color: white;
+    border-radius: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+.intro {
+    width: 80%;
+    min-height: 90%;
+    margin: 0 auto;
+    padding: 1em 10% 0.5em;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark)
+}
+
+.intro h3 {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* main el */
+main {
+    min-height: 90%;
+    display: flex;
+    margin: 100px auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* question container */
+
+#question-text {
+    color: var(--text-dark);
+    background-color: var(--light);
+    font-size: 38px;
+    padding: 30px 30px;
+    border: var(--dark) solid;
+    border-radius: 8px;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav h2 {
+        display: flex;
+        flex-direction: column;
+    }
+}

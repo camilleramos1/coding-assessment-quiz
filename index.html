@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coding Assessment Quiz</title>
     <link rel="stylesheet" href="Assets/style.css">
+    <script src="Assets/script.js"></script>
 </head>
 <body>
-    
-    <script src="Assets/script.js"></script>
+    <header>
+        <nav>
+            <h2 class="hover-text" onclick="displayScores()">Click to View High Scores</h2>
+            <h2 class="timer">Time remaining⏱: <span id="timer">0</span></h2>
+        </nav>
+    </header>
+    <!-- Landing page for site -->
+    <section class="intro" id="intro">
+        <h1 id="title">Welcome to the coding assessment quiz!</h1>
+        <h3>Are you ready?</h3>
+        <button class="start-btn hover-btn" id="start" onclick="startQuiz()"><span>Start✅</span></button>
+        <button class="highscore-btn hover-btn" id="highscores" onclick="displayScores()"><span>View High Scores📄</span></button>
+    </section>
+    <main>
+        <!-- quiz function will be in JavaScript -->
+        <div class="hide" id="question-container">
+            <h3 id="question-text"></h3>
+            <div class="choices" id="choices"></div>
+        </div>
+        <!-- lets user know if they got the answer correct -->
+        <div id="feedback" class="feedback hide"></div>
+        <!-- score will be shown once quiz is completed -->
+        <section class="hide" id="result">
+            <h3>Number of questions answered correctly📋:</h3>
+            <p id="questions-correct"></p>
+            <h3>Time Remaining🕒:</h3>
+            <p id="time-remaining"></p>
+            <h3>Final score💰:</h3>
+            <p id="final-score"></p>
+            <input type="text"
+            name="initials"
+            id="user-initials"
+            placeholder="Enter Initials Here"
+            maxlength="2">
+            <button class="hover-btn" onclick="saveScore()">Save Score📄</button>
+            <button class="hover-btn" onclick="startQuiz()">Retake Quiz</button>
+        </section>
+        <section class="high-scores hide" id="high-scores">
+            <h3>High Scores</h3>
+            <p id="no-high-scores">
+                There are no high scores yet.
+            </p>
+            <button class="hover-btn" onclick="startQuiz()">Return to Quiz</button>
+        </section>
+    </main>
 </body>
 <footer>
 </footer>
