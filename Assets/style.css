@@ -123,6 +123,14 @@ main {
     align-items: center;
 }
 
+.wrong {
+    color: red;
+}
+
+.correct {
+    color: green;
+}
+
 .result {
     display: flex;
     flex-direction: column;

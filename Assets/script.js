@@ -28,6 +28,8 @@ const quizQuestions = [
   ];
   
   // Global variables for the quiz
+  var feedback = document.getElementById("feedback")
+
   let currentQuestionIndex = 0;
   let timeLeft = 75;
   let timerId;
@@ -35,7 +37,6 @@ const quizQuestions = [
   let playerScore = 0;
   let highScores = JSON.parse(localStorage.getItem("key")) || []
 
-  console.log(highScores);
   // Function to start the quiz
   function startQuiz() {
     playerScore = 0;
@@ -74,6 +75,7 @@ const quizQuestions = [
     if (selectedAnswer === quizQuestions[currentQuestionIndex].answer) {
       // Display feedback that the answer is correct
       document.getElementById("feedback").textContent = "Correct!";
+      document.getElementById("feedback").classList.add("correct");
       currentQuestionIndex++;
       playerScore++;
       // Check if all questions have been answered
@@ -85,6 +87,8 @@ const quizQuestions = [
     } else {
       // Display feedback that the answer is incorrect
       document.getElementById("feedback").textContent = "Incorrect!";
+      // document.getElementById("feedback").classList.remove("correct");
+      document.getElementById("feedback").classList.add("wrong");
       // Subtract 5 seconds from the timer
       timeLeft -= 5;
       currentQuestionIndex++;
