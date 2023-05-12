@@ -27,9 +27,7 @@ const quizQuestions = [
     }
   ];
   
-  // Global variables for the quiz
-  var feedback = document.getElementById("feedback")
-
+  // Define variables for the quiz
   let currentQuestionIndex = 0;
   let timeLeft = 75;
   let timerId;
@@ -42,6 +40,7 @@ const quizQuestions = [
     playerScore = 0;
     timeLeft = 75;
     currentQuestionIndex = 0;
+    // hide the elements we do not need on the page
     document.getElementById("no-high-scores").classList.add("hide")
     document.getElementById("result").classList.add("hide");
     document.getElementById("high-scores").classList.add("hide");
@@ -75,6 +74,7 @@ const quizQuestions = [
     if (selectedAnswer === quizQuestions[currentQuestionIndex].answer) {
       // Display feedback that the answer is correct
       document.getElementById("feedback").textContent = "Correct!";
+      // makes feedback text green if answer is correct
       document.getElementById("feedback").classList.add("correct");
       currentQuestionIndex++;
       playerScore++;
@@ -87,7 +87,7 @@ const quizQuestions = [
     } else {
       // Display feedback that the answer is incorrect
       document.getElementById("feedback").textContent = "Incorrect!";
-      // document.getElementById("feedback").classList.remove("correct");
+      // makes feedback text red if answer is incorrect
       document.getElementById("feedback").classList.add("wrong");
       // Subtract 5 seconds from the timer
       timeLeft -= 5;
@@ -115,7 +115,7 @@ const quizQuestions = [
       endQuiz();
     }
   }
-  
+  // function so user can save their initials and score locally
   function saveScore() {
 
     var initials = document.getElementById("user-initials").value;
@@ -143,7 +143,7 @@ const quizQuestions = [
     let finalScoreEl = document.getElementById("final-score");
     finalScoreEl.textContent = playerScore;
   }
-
+  // show high scores on click
   function displayScores() {
     document.getElementById("result").classList.add("hide");
     document.getElementById("question-container").classList.add("hide");
@@ -165,6 +165,7 @@ const quizQuestions = [
         div.append(paragraph1, paragraph2);
       } 
     } else {
+      // if no high scores are saved, user is shown this message
       noHighScores.textContent = "No scores to display.";
     }
   }
