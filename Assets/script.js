@@ -88,6 +88,7 @@ const quizQuestions = [
       // Display feedback that the answer is incorrect
       document.getElementById("feedback").textContent = "Incorrect!";
       // makes feedback text red if answer is incorrect
+      document.getElementById("feedback").classList.remove("correct");
       document.getElementById("feedback").classList.add("wrong");
       // Subtract 5 seconds from the timer
       timeLeft -= 5;
