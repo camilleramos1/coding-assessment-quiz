@@ -73,7 +73,7 @@ const quizQuestions = [
     // Check if the answer is correct
     if (selectedAnswer === quizQuestions[currentQuestionIndex].answer) {
       // Display feedback that the answer is correct
-      var correct = document.getElementById("feedback").textContent = "Correct!"; 
+      document.getElementById("feedback").textContent = "Correct!";
       currentQuestionIndex++;
       playerScore++;
       // Check if all questions have been answered
@@ -129,7 +129,7 @@ const quizQuestions = [
   }
   // Function to end the quiz
   function endQuiz() {
-    // document.getElementById("feedback").classList.remove("hide");
+    document.getElementById("feedback").classList.add("hide");
     document.getElementById("question-container").classList.add("hide");
     document.getElementById("result").classList.remove("hide");
 
@@ -163,9 +163,4 @@ const quizQuestions = [
     } else {
       noHighScores.textContent = "No scores to display.";
     }
-    // if (highScores == 0) {
-    //   document.getElementById("no-high-scores").classList.remove("hide");
-    //   document.getElementById("intro").classList.add("hide");
-    // }
-
   }
