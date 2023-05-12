@@ -10,10 +10,9 @@ Once the user has completed the quiz, they are presented with their final score.
 ## Screenshot of Live Site
 
 Below is a screenshot of the website:
+<img width="1278" alt="image" src="https://github.com/camilleramos1/coding-assessment-quiz/assets/129894673/504e5341-600b-4c9a-8a46-5dc532f0f07f">
 
 
 ## Link to Live Site
 
-https://camilleramos1.github.io/coding-assessment-quiz/
-
-Click here to visit the application.
+[Click here](https://camilleramos1.github.io/coding-assessment-quiz/) to visit the application.
