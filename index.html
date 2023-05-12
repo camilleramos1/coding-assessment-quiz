@@ -31,9 +31,7 @@
         <!-- lets user know if they got the answer correct -->
         <div id="feedback" class="feedback hide"></div>
         <!-- score will be shown once quiz is completed -->
-        <section class="hide" id="result">
-            <h3>Number of questions answered correctly📋:</h3>
-            <p id="questions-correct"></p>
+        <section class="hide result" id="result">
             <h3>Time Remaining🕒:</h3>
             <p id="time-remaining"></p>
             <h3>Final score💰:</h3>
@@ -43,14 +41,12 @@
             id="user-initials"
             placeholder="Enter Initials Here"
             maxlength="2">
-            <button class="hover-btn" onclick="saveScore()">Save Score📄</button>
+            <button class="hover-btn" id="saveScore" onclick="saveScore()">Save Score📄</button>
             <button class="hover-btn" onclick="startQuiz()">Retake Quiz</button>
         </section>
         <section class="high-scores hide" id="high-scores">
             <h3>High Scores</h3>
-            <p id="no-high-scores">
-                There are no high scores yet.
-            </p>
+            <p id="no-high-scores" class="hide"></p> 
             <button class="hover-btn" onclick="startQuiz()">Return to Quiz</button>
         </section>
     </main>

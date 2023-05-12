@@ -110,11 +110,25 @@ main {
     padding: 20px;
 }
 
-#result {
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.result {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--text-dark);
+}
+.divScores {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    font-size: 24px;
     color: var(--text-dark);
 }
 
@@ -123,8 +137,9 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-    nav h2 {
+    nav {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+
     }
 }
