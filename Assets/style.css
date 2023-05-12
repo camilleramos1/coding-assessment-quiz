@@ -116,10 +116,11 @@ main {
 }
 
 .feedback {
+    margin: auto;
     font-size: 34px;
+    display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .result {
